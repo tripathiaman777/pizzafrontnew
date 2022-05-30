@@ -50,7 +50,8 @@ const routes: Routes = [
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'reset-password-done', component: ResetPasswordDoneComponent },
 
-  { path: 'aa', component: AaComponent },
+  { path: 'aa', component: AaComponent, canActivate: [AuthGuard]   },
+  
 
   { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
   { path: 'change-password', component: ChangepasswordComponent, canActivate: [AuthGuard] },
@@ -60,7 +61,9 @@ const routes: Routes = [
   { path: 'userfeedback', component: UserfeedbackComponent, canActivate: [AuthGuard] },
   { path: 'empty-cart', component:  EmptycartComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-  { path: '**', component: ErrComponent }
+  { path: '**', component: ErrComponent },
+  { path: 'Payment', component: CartComponent }
+
 ];
 
 

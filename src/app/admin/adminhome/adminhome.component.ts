@@ -67,8 +67,11 @@ export class AdminhomeComponent implements OnInit {
 
         if(data['msg']=="yes deleted order by admin")
         {
-          alert("successfully deleted order")
-          window.location.reload();
+          swal("successfully deleted order")
+          setTimeout(() => {
+            
+            window.location.reload();
+          }, 2000);
         }
       },
       (error) => {

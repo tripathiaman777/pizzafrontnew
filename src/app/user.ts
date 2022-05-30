@@ -6,4 +6,5 @@ export class User {
   public password:string;
   public role:string;
   public blocked:boolean;
+  public cardholder:string;
 }

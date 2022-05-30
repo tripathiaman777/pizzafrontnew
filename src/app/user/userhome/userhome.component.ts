@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
+import swal from 'sweetalert';
 @Component({
   selector: 'app-userhome',
   templateUrl: './userhome.component.html',
@@ -26,6 +27,7 @@ export class UserhomeComponent implements OnInit {
     this.readPizza()
   }
   check() {
+    // swal("Welcome to Pizza Hunt!!");
     this.authService.check().subscribe(
       data => {
         console.log(data);

@@ -23,7 +23,8 @@ export class AuthGuard implements CanActivate {
         return false;
       }
     }
-    else {
+    else {  
+      
       localStorage.removeItem('token');
       localStorage.removeItem('userid')
       localStorage.removeItem('N1@#I2@#M3@#D4@#A6');

@@ -99,6 +99,7 @@ export class CartComponent implements OnInit {
           this.authService.msg="pizza deleted from the cart";
           this.authService.avail=true;
           this.router.navigate(['/userhome'])
+          // this.router.navigate(['/Payment'])
         }
       },
       error => {
@@ -109,7 +110,7 @@ export class CartComponent implements OnInit {
   }
   checkout()
   {
-
+    
     this.cartService.deletecart().subscribe(
       data => {
 
@@ -117,8 +118,11 @@ export class CartComponent implements OnInit {
         {
 
           this.authService.msg="sucessfully order placed!!!!";
+          
           this.authService.avail=true;
-          this.router.navigate(['/userhome'])
+
+          // this.router.navigate(['/Payment'])
+          this.router.navigate(['/aa'])
         }
       },
       error => {
